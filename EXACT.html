@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Majd Website</title>
+
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00ffcc;
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>🔥 Click Game</h1>
+<h2>Score: <span id="score">0</span></h2>
+<button onclick="playGame()">Click Me 🎮</button>
+<h1> Welcome My Friend</h1>
+<h2 id="count">0</h2>
+<p>My name is Majd</p>
+<p>I am learning programming 💪</p>
+
+<h2>My goals:</h2>
+
+<p>- Become a developer</p>
+<p>- Make apps 📱</p>
+<p>- Earn money 💰</p>
+
+</body>
+<script>
+let score = 0;
+
+let colors = ["red", "blue", "green", "purple", "orange"];
+let i = 0;
+
+function playGame() {
+    score++;
+    document.getElementById("score").innerText = score;
+
+    document.body.style.backgroundColor = colors[i];
+    i++;
+
+    if (i == colors.length) {
+        i = 0;
+    }
+
+    if (score == 20) {
+        alert("🔥 You Win!");
+    }
+}
+</script>
+</html>
